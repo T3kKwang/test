@@ -61,10 +61,10 @@
                     <br><br>
                     <div class="toolbar-title">Preferences</div>
                     <p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
-                        Preferences will be saved for future logins as well
+                        preferences will be saved for future logins as well
                     </p>
                     <p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
-                        Current ML Model: <br>{{ model_string }}
+                        Current ML Model: {{ model_string }}
                     </p>
                     <li>
                         <div class="dropdown">
@@ -109,6 +109,7 @@
                 <button type="button" class="btn btn-primary">
                     {{ result }} <span class="badge bg-secondary">{{ percentage }}</span>
                 </button>
+                <a href=" {{ url_for('analysis1', num=num) }} ">view detailed analysis</a>
 
                 <!--<div class="email-date">  date </div>-->
                 <!--get the email title corresponding to selected one in UI-->
@@ -122,7 +123,7 @@
             </div>
 <!--            get the email body corresponding to selected one in UI-->
             <div class="email-body">
-                <pre>{{ specific_body }} </pre>
+                {{ specific_body }}
             </div>
         </div>
     </div>

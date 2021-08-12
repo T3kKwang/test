@@ -61,10 +61,10 @@
                     <br><br>
                     <div class="toolbar-title">Preferences</div>
                     <p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
-                        Preferences will be saved for future logins as well
+                        preferences will be saved for future logins as well
                     </p>
                     <p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
-                        Current ML Model: <br>{{ model_string }}
+                        Current ML Model: {{ model_string }}
                     </p>
                     <li>
                         <div class="dropdown">
@@ -106,11 +106,12 @@
                 <button type="button" class="btn btn-primary">
                     {{ result_list[0] }} <span class="badge bg-secondary">{{ percentage_list[0] }}</span>
                 </button>
+                <a href=" {{ url_for('analysis') }} ">view detailed analysis</a>
                 <div class="email-subject"> {{subject[0]}} </div>
                 <p class="recipient"><span>From:</span> {{address[0]}} </p>
             </div>
             <div class="email-body">
-                <pre>{{body}} </pre>
+                <p> {{body[0]}} </p>
             </div>
         </div>
     </div>

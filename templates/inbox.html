@@ -13,76 +13,76 @@
 <div class="content-wrapper">
     <!-- Content Place Here -->
     <div class="email-app card-margin">
-		<div class="email-toolbars-wrapper">
-			<div class="toolbar-body">
-				<div class="toolbar-title">Folders</div>
-				<ul class="toolbar-menu">
-					<li class="active">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-							<polyline points="22,6 12,13 2,6"></polyline>
-						</svg>
-						<a href="#">Inbox</a>
-						<span class="badge badge-sb-base"></span>
-					</li>                  
+        <div class="email-toolbars-wrapper">
+            <div class="toolbar-body">
+                <div class="toolbar-title">Folders</div>
+                <ul class="toolbar-menu">
+                    <li class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="#">Inbox</a>
+                        <span class="badge badge-sb-base"></span>
+                    </li>                  
 					
-					<li>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="feather feather-alert-circle"
-						>
-							<circle cx="12" cy="12" r="10"></circle>
-							<line x1="12" y1="8" x2="12" y2="12"></line>
-							<line x1="12" y1="16" x2="12" y2="16"></line>
-						</svg>
-						<a href="{{ url_for('showQuarantine') }}">Suspicious</a>
-					</li>
-					 <li>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy">
-							<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-						</svg>
-						<a href="{{ url_for('blacklist') }}">BlackList</a>
-					</li>
-					<li>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
-							<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-						</svg>
-						<a href="{{ url_for('whitelist') }}">WhiteList</a>
-					</li>
-					<br><br>
-					<div class="toolbar-title">Preferences</div>
-					<p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
-						Preferences will be saved for future logins as well
-					</p>
-					<p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
-						Current ML Model: <br>{{ model_string }}
-					</p>
-					<li>
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Select ML Model
-							</button>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item" href="/model/{{ 0 }}">Naive Bayes</a>
-									<a class="dropdown-item" href="/model/{{ 1 }}">MLP Classifier</a>
-									<a class="dropdown-item" href="/model/{{ 2 }}">Random Forest</a>
-								</div>
-					 </div>
-					</li>
-					<li>
-						<a class="btn btn-primary" style="margin-top:100px;color:white" href="{{ url_for('logout') }}">Logout</a>
-					</li>
-				</ul>              
-			</div>
+                    <li>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-alert-circle"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12" y2="16"></line>
+                        </svg>
+                        <a href="{{ url_for('showQuarantine') }}">Suspicious</a>
+                    </li>
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <a href="{{ url_for('blacklist') }}">BlackList</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <a href="{{ url_for('whitelist') }}">WhiteList</a>
+                    </li>
+                    <br><br>
+                    <div class="toolbar-title">Preferences</div>
+                    <p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
+                        preferences will be saved for future logins as well
+                    </p>
+                    <p style="overflow: hidden;max-width: 200px;margin-left:20px;color: #727686;">
+                        Current ML Model: {{ model_string }}
+                    </p>
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select ML Model
+                            </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="/model/{{ 0 }}">Naive Bayes</a>
+                                    <a class="dropdown-item" href="/model/{{ 1 }}">MLP Classifier</a>
+                                    <a class="dropdown-item" href="/model/{{ 2 }}">Random Forest</a>
+                                </div>
+                     </div>
+                    </li>
+                    <li>
+                        <a class="btn btn-primary" style="margin-top:100px;color:white" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                </ul>              
+            </div>
         </div>
 
         <div class="email-list-wrapper">
@@ -116,7 +116,7 @@
                 <p class="recipient"><span>From:</span> {{address[0]}} </p>
             </div>
             <div class="email-body">
-                <pre>{{body}} </pre>
+                <p> {{body[0]}} </p>
             </div>
         </div>
     </div>
@@ -142,7 +142,7 @@ body{
   box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
-  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1); 
+  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
 }
 
 .email-app .email-toolbars-wrapper .toolbar-header {
